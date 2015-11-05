@@ -6,8 +6,8 @@ public class movimiento : MonoBehaviour {
 	//private float velocidad = 2.0f;
 	public Rigidbody rb;
 	private int pos = 0;
-	//private float velocidadInicio = 100.0f;
-	//bool activo = false;
+	//private float velocidadInicio = 0.0f;
+	bool activo = true;
 	public ParticleSystem Particulas;
 	private float Tiempo = 0f;
 	public bool dentro = false;
@@ -39,35 +39,27 @@ public class movimiento : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		TocarMoneda ();
-		//if (Input.GetTouch(0).phase == TouchPhase.Began) 
-		if(Input.GetKeyDown(KeyCode.Space) && PausarJuego.pause == false)
-		//if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+		//if (Input.GetKeyDown (KeyCode.Space) && PausarJuego.pause == false) 
+		if (Input.GetTouch(0).phase == TouchPhase.Began && PausarJuego.pause == false)
 		{
-			if(pos == 0) pos = 1;
-			else if(pos == 1) pos = 2;
-			else pos = 1;
+			if (pos == 0)
+				pos = 1;
+			else if (pos == 1)
+				pos = 2;
+			else
+				pos = 1;
 		}
-		
-		if(pos == 1 && PausarJuego.pause == false) 
-		{
-			//rb.transform.Rotate(new Vector3(0.0f, 0.0f, 100f) * Time.deltaTime, Space.Self);
-			//rb.transform.Translate(new Vector3(-8f, 0.0f, 0.0f) * Time.deltaTime, Space.Self);
-			rb.transform.Translate(Vector3.left * 0.2f);
+			if(pos == 1 && PausarJuego.pause == false) 
+			{
+				rb.transform.Translate (Vector3.left * 0.2f);
+				activo = true;
+			}
+			else if(pos == 2 && PausarJuego.pause == false)
+			{
+				rb.transform.Translate (Vector3.back * 0.2f);
+				activo = false;
+			}
 
-			//rb.transform.Translate(0.0f, 0.0f, -0.5f);
-			//rb.transform.Rotate (0, 10, 0);
-			//rb.AddForce(150, 0, -200);
-			//activo = true;
-		}
-		else if(pos == 2 && PausarJuego.pause == false) {
-			rb.transform.Translate(Vector3.back * 0.2f);
-			//rb.transform.Translate(0.5f, 0.0f, 0.0f);
-			//rb.transform.Translate(0.0f, -0.5f, 0.0f);
-			//rb.transform.Rotate (-5, 0, 0);
-			//rb.AddForce(-200, 0, 200);
-			//activo = false;
-		}
-		
 		if (PausarJuego.pause == true) 
 			rb.transform.Translate(0.0f, 0.0f, 0.0f);
 		

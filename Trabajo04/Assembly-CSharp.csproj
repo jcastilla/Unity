@@ -45,10 +45,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FisicaBomba.cs" />
      <Compile Include="Assets\Scripts\PausarJuego.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\bombardeo.cs" />
+     <Compile Include="Assets\Scripts\bombardeo1.cs" />
      <Compile Include="Assets\Scripts\botonFinal.cs" />
+     <Compile Include="Assets\Scripts\desaparecerBomba.cs" />
      <Compile Include="Assets\Scripts\desaparecerMoneda.cs" />
      <Compile Include="Assets\Scripts\escenario.cs" />
      <Compile Include="Assets\Scripts\movimiento.cs" />

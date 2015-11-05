@@ -1,11 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/desaparecerMoneda.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/desaparecerBomba.cs">
     <Files>
-      <File FileName="Assets/Scripts/puntuacion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/record.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/movimiento.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/desaparecerMoneda.cs" Line="27" Column="6" />
+      <File FileName="Assets/Scripts/desaparecerBomba.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FisicaBomba.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -14,6 +14,6 @@ public class textoFinal : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "!!!ENHORABUENA!!!  \n\n Has completado el juego";
+		text.text = "!!!ENHORABUENA!!!  \n\n Has completado el juego \n\n\nPuntuacion: " +movimiento.puntos;
 	}
 }
